@@ -14,10 +14,22 @@ eg. AlexNet, GoolgLeNet, ResNet, DenseNet, LSTM, AutoEncoder, GAN .etc
 
 - Loss Function : the difference of the ....
 this is dependent on the task
-1. Regression :  (... error )
-2. Classification : Cross Entropy ()
+1. Regression :  MSE (Mean Squared error) - 연속형 변수 예측할 때 
+2. Classification : Cross Entropy - binary cross 
 3. Probabilicstic : MLE (maximum likelihood estimation)
 - Optimizer & Regularization 
+
+
++) Batch 
+1. batch gradient descent : 전체 데이터 고려함, 한 번의 epoch 에 모든 매개변수 업데이트 한 번 수행 (시간 오래 걸림)
+2. stochastic gradient descent (SGD) : batch size = 1, 시간이 갈수록 최적해, 메모리 적게 사용함 
+3. mini batch gradient descent : 배치 크기 지정함, 2^n
+
++) Optimizer
+1. momentum : 경사하강법에서 계산된 접선의 기울기에 한 시점 전의 접선의 기울기 값을 일정한 비율만큼 반영 
+2. Anagrad : 각 매개변수에 다른 학습률 적용 (변화가 적은 매개 변수 : 높은 학습률, 변화가 큰 매개 변수 : 낮은 학습률)
+3. RMS prop : Anagrad 갈수록 학습률이 낮아지는 단점 보완한 방법 
+4. Adam : RMS prop + Momentum 
 
 ### 3. Neural Network
 Function Approximators ::
